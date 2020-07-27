@@ -1,0 +1,542 @@
+@font-face {
+  font-family: downtown;
+  src: url("./Fonts/Downtown\ v1.01.otf");
+}
+@font-face {
+  font-family: mont_regular;
+  src: url("./Fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: mont_semi_bold;
+  src: url("./Fonts/Montserrat-SemiBold.ttf");
+}
+
+* {
+  --primary: #4795fa;
+  --backg: #34313d;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  body {
+    background-color: var(--backg);
+    color: white;
+    // overflow: hidden;
+    .primary {
+      background-color: var(--primary) !important;
+    }
+    // Material Ui preferences
+    .MuiDrawer-paper {
+      background-color: #35343e;
+      color: white;
+      border-radius: 0 20px 20px 0;
+      width: 200px;
+      overflow: hidden;
+    }
+    .MuiSvgIcon-root {
+      color: whitesmoke;
+    }
+
+    .MuiCardHeader-subheader {
+      color: rgba(255, 255, 255, 0.705) !important;
+    }
+    .MuiTypography-body2 {
+      color: rgb(234, 238, 238);
+    }
+    .MuiCardHeader-title {
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+    }
+    .MuiInput-input,
+    .MuiInput-input::after,
+    .MuiFilledInput-input {
+      color: white;
+      background-color: transparent;
+    }
+    .MuiInputBase-input::before {
+      background-color: red;
+    }
+    .MuiInputLabel-root {
+      color: var(--primary);
+    }
+    .MuiFormControl-root {
+      width: 100%;
+    }
+    .MuiMenu-list,
+    .MuiMenu-paper {
+      background-color: var(--backg);
+      color: white;
+      border-radius: 10px;
+    }
+
+    #auth-signup-form-control .MuiInputBase-formControl {
+      transform: translateY(10px);
+    }
+    .scrollbar-track {
+      background-color: #34313d;
+    }
+    .scrollbar-thumb {
+      background-color: #444352;
+    }
+    .smooth-scroll {
+    }
+    // App styles
+    .bodyContainer {
+      display: flex;
+      justify-content: center;
+      height: 90vh;
+    }
+
+    .link {
+      color: white;
+    }
+
+    .back-drop-loader {
+      color: var(--primary);
+      z-index: 10;
+      background-color: #35343ea9;
+    }
+
+    // Nav Bar styles
+    .app-bar-container {
+      flex-grow: 1;
+    }
+    .app-bar {
+      background-color: #35343e !important;
+      border-radius: 0 0 30px 30px;
+
+      .nav-btn {
+        margin-left: 20px;
+      }
+    }
+    .menu-btn {
+      margin-right: 10px;
+    }
+    .logo {
+      font-family: downtown;
+      letter-spacing: 5px;
+      font-size: 1.8rem;
+      font-weight: 100;
+    }
+    .menulogo-container {
+      transform: translate(8.2px, -7px);
+    }
+    .navbar-account-icon {
+      @media (max-width: 340px) {
+        display: none;
+      }
+    }
+    .hamburger-account-icon {
+      display: none;
+      @media (max-width: 340px) {
+        display: flex;
+      }
+    }
+    .list-item-container {
+      transform: translateX(8.2px);
+      display: flex;
+      .list-item-text {
+        transform: translate(-10px, -2px);
+      }
+    }
+    // Authentication Pages style
+    .auth-container {
+      max-width: 1800px;
+      width: 800px;
+      @media (max-width: 1000px) {
+        width: 700px;
+      }
+      @media (max-width: 750px) {
+        width: 550px;
+      }
+      @media (max-width: 600px) {
+        width: 450px;
+      }
+      @media (max-width: 500px) {
+        width: 350px;
+      }
+      @media (max-width: 400px) {
+        width: 300px;
+      }
+
+      .auth-title {
+        font-family: mont_semi_bold;
+        font-size: 32px;
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+      }
+      .auth-signup-input {
+        margin: 8px 0;
+      }
+      .auth-login-input {
+        margin: 15px 0;
+      }
+      .auth-btn {
+        margin: 30px 0;
+      }
+      .auth-password-label {
+        transform: translateY(16px);
+      }
+      .auth-form-control-label {
+        margin: 20px 10px 0px -12px;
+      }
+    }
+
+    // Profile Page styles
+    .profile-container {
+      width: 100%;
+      .profile-hero-wrapper {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        .profile-update-image-input {
+          display: none;
+        }
+        .profile-picture {
+          width: 190px;
+          height: 190px;
+          border-radius: 50%;
+          margin-left: 120px;
+          font-size: 4rem;
+          background: linear-gradient(145deg, #3f3b4a, #35323e);
+          box-shadow: 10px 10px 23px #312d38, -10px -10px 23px #474352ab;
+        }
+        @media (max-width: 1000px) {
+          .profile-picture {
+            width: 165px;
+            height: 165px;
+            margin-left: 60px;
+            font-size: 3rem;
+          }
+        }
+        @media (max-width: 580px) {
+          .profile-picture {
+            width: 130px;
+            height: 130px;
+            margin-left: 20px;
+            font-size: 2rem;
+          }
+        }
+        @media (max-width: 340px) {
+          .profile-picture {
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            margin-right: 10px;
+            font-size: 2rem;
+          }
+        }
+        .profile-info-wrapper {
+          width: 56%;
+          .profile-follow-btn {
+            margin: 20px;
+          }
+          .profile-name {
+            font-family: mont_semi_bold;
+            margin-bottom: 20px;
+          }
+          @media (max-width: 700px) {
+            h1 {
+              font-size: 25px;
+            }
+          }
+          @media (max-width: 500px) {
+            h1 {
+              font-size: 22px;
+            }
+          }
+          @media (max-width: 380px) {
+            h1 {
+              font-size: 18px;
+            }
+          }
+          .profile-details-container {
+            display: flex;
+            justify-content: center;
+            h4 {
+              margin: 0 30px;
+            }
+            @media (max-width: 700px) {
+              h4 {
+                margin: 0 10px;
+                font-size: 14px;
+              }
+            }
+            @media (max-width: 500px) {
+              h4 {
+                margin: 0 10px;
+                font-size: 12px;
+              }
+            }
+            @media (max-width: 380px) {
+              h4 {
+                margin: 0 5px;
+                font-size: 10px;
+              }
+            }
+            font-family: mont_regular;
+          }
+        }
+      }
+      .profile-gallery-container {
+        max-width: 1600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        background-color: var(--backg);
+        .profile-gallery {
+          display: grid;
+          grid-gap: 220px 35px;
+          width: 90%;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1.4fr));
+          grid-auto-rows: 150px;
+          grid-auto-flow: row dense;
+          padding: 20px;
+          @media (max-width: 340px) {
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1.4fr));
+          }
+          .profile-gallery-item {
+            width: 100%;
+            height: 230%;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 14px 14px 28px #18181b, -14px -14px 28px #322f3a9a;
+          }
+        }
+      }
+    }
+
+    // Upload Page styles
+    .upload-container {
+      max-width: 1800px;
+      width: 600px;
+      .upload-title {
+        font-family: mont_semi_bold;
+        font-size: 32px;
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+      }
+      .upload-title-input {
+        margin: 8px;
+      }
+      .upload-upload-image {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+        .upload-input {
+          display: none;
+        }
+      }
+      .upload-description-container {
+        overflow: visible;
+      }
+      .upload-description-input {
+        max-width: 1800;
+        margin-bottom: 50px;
+      }
+    }
+
+    @mixin post-card-styles {
+      svg {
+        color: rgb(184, 184, 199);
+      }
+      @media (max-width: 1000px) {
+        width: 500px;
+      }
+      @media (max-width: 500px) {
+        width: 400px;
+      }
+      @media (max-width: 400px) {
+        width: 370px;
+      }
+      @media (max-width: 370px) {
+        width: 340px;
+      }
+      width: 550px;
+      color: white;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #383441, #2f2c37);
+      box-shadow: 12px 12px 24px #26242d, -12px -12px 24px #3f3c49b4;
+      margin: 30px 0;
+
+      .post-card-media {
+        height: 0;
+        padding-top: 56.25%;
+        border-radius: 30px;
+        width: 99%;
+        margin-left: 0.5%;
+        box-shadow: 12px 12px 24px #2c2a33, -12px -12px 24px #3a3744b4;
+      }
+      .post-card-content {
+        margin-top: -10px;
+        margin-left: 10px;
+        .post-card-title {
+          margin-bottom: 15px;
+          font-weight: 500;
+          font-size: 1.3rem;
+        }
+        .post-card-caption {
+          color: whitesmoke;
+          font-weight: 300;
+          font-size: 0.9rem;
+        }
+      }
+      .post-card-profile-avatar {
+        background: linear-gradient(145deg, #3f3b4a, #35323e);
+        box-shadow: 10px 10px 23px #28252e, -10px -10px 23px #474352ab;
+        .post-card-profile-image {
+          width: 40px;
+        }
+      }
+      .post-card-more-icon {
+      }
+      .post-card-options-menu {
+      }
+
+      .post-card-like-icon {
+        display: flex;
+        .post-card-like-icon-inactive {
+        }
+        .post-card-like-icon-active {
+          z-index: 2;
+          position: absolute;
+          color: #f33949;
+          transform: scale(0);
+          transition: all 0.1s ease-in-out;
+        }
+        .post-card-like-icon-liked {
+          transition: transform 0.2s cubic-bezier(0.175, 1, 0.3, 1.5);
+          transform: scale(1.1);
+        }
+      }
+
+      .post-card-likes-number {
+        margin: 0px 28px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        color: rgb(145, 145, 165);
+      }
+
+      .post-card-comments-btn {
+        margin-left: auto !important;
+        color: rgb(222, 225, 228);
+        font-size: 13px;
+        .post-card-expand-arrow {
+          transform: rotate(0deg);
+          transition: all 0.3s ease-in-out !important;
+        }
+        .post-card-expand-open {
+          transform: rotate(180deg);
+        }
+      }
+
+      .post-card-expand-comments-disabled {
+        color: rgb(86, 86, 104);
+        svg {
+          color: rgb(86, 86, 104);
+        }
+      }
+      .post-card-comment-input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 23px 0;
+        margin-bottom: 15px;
+        margin-left: 5px;
+        width: 97%;
+        #post-card-comment-input .MuiInputBase-formControl {
+        }
+        .post-card-comment-input-label {
+          margin-top: -30px;
+          margin-left: 14px;
+        }
+        .post-card-comment-btn {
+          transform: translateY(-8px);
+          transform: translateX(10px);
+        }
+      }
+      .post-card-comment-search-btn {
+        transform: translateY(7px) !important;
+      }
+      .post-card-comment-input {
+        margin: 15px;
+        margin-top: -15px;
+      }
+
+      .post-card-comments-container {
+        border-radius: 30px;
+        background-color: #36343f;
+        box-shadow: 12px 12px 24px #26242d, -12px -12px 24px #37363db4;
+        padding: 13px;
+        margin: 20px 0;
+        margin-top: -5px;
+        .post-card-comments-wrapper {
+          .post-card-comments-header {
+            margin: 10px;
+            .post-card-comments-link {
+              display: flex;
+              .post-card-comments-user-title {
+                margin: 2px 15px;
+              }
+              .post-card-comments-user-image {
+                width: 40px;
+              }
+            }
+          }
+          .post-card-comments-comment {
+            margin: 2px 15px;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+
+    // Home Posts styles
+    .home-card-container {
+      .home-card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .post-card-container {
+          @include post-card-styles();
+        }
+      }
+    }
+
+    // post page post card styles
+    .post-page-container {
+      svg {
+        color: rgb(86, 86, 104);
+      }
+      width: 100%;
+      .post-card-container {
+        @include post-card-styles();
+        color: white;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        width: 100%;
+        .post-card-media-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          .post-card-media {
+            padding-top: 57%;
+            border-radius: 30px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
