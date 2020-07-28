@@ -8,7 +8,7 @@ If you are new to MERN stack , reading the code would be pretty helpful to get y
 
 You can try this app here : [demo](https://linxx.herokuapp.com/)
 
-![](https://res.cloudinary.com/ariasalehi/image/upload/v1595913505/minimal_browser_ksdfuj.png)
+[![](https://res.cloudinary.com/ariasalehi/image/upload/v1595913505/minimal_browser_ksdfuj.png)](https://linxx.herokuapp.com/)
 
 # Run it on your computer
 #### 1. Clone this repo :
