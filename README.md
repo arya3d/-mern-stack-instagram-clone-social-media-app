@@ -4,9 +4,11 @@ Linx is a social media app built with the MERN stack ( mongodb , express , react
 
 If you are new to MERN stack , reading the code would be pretty helpful to get you started .
 
-# Try it
+# Try the demo
 
 You can try this app here : [demo](https://linxx.herokuapp.com/)
+
+![](https://res.cloudinary.com/ariasalehi/image/upload/v1595913505/minimal_browser_ksdfuj.png)
 
 # Run it on your computer
 #### 1. Clone this repo :
